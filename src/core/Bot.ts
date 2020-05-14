@@ -5,10 +5,10 @@ import MessageProcessor from './MessageProcessor';
 
 class Bot {
   private static client: Client;
-  private static options: TOpcion;
+  private static options: TOption;
 
   // TODO: agregar mas opciones de config para el bot
-  constructor(_options: TOpcion) {
+  constructor(_options: TOption) {
     Bot.options = _options;
     Bot.client = new Client();
     this.event();

@@ -3,14 +3,14 @@ import configLoad from './config';
 
 async function main() {
   try {
-    configLoad();
+    await configLoad();
 
     const bot = new Bot({
-      prefix: '-',
+      prefix: '/',
       token: global.config.discordToken
     });
 
-    // bot.
+    await bot.start();
   } catch (error) {
     console.error('!! ERROR', error.message);
   }

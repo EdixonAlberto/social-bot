@@ -5,6 +5,7 @@ class MessageProcessor {
   private _content: TContent = {
     prefix: '',
     command: '' as commandsList,
+    params: [],
     server: () => {
       return {} as Message;
     }
@@ -21,6 +22,7 @@ class MessageProcessor {
     this._content = {
       prefix: message.content.substr(0, 1),
       command: prefixCommand.substr(1) as commandsList,
+      params: words,
       server: () => message
     };
   }

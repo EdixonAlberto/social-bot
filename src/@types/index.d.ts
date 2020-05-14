@@ -3,7 +3,7 @@ type TConfig = {
   discordToken: string;
 };
 
-type TOpcion = {
+type TOption = {
   prefix: string;
   token: string;
 };
@@ -11,6 +11,7 @@ type TOpcion = {
 type TContent = {
   prefix: string;
   command: import('../enumerations').commandsList;
+  params: Array<string>;
   server: () => import('discord.js').Message;
 };
 
