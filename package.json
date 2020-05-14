@@ -1,27 +1,30 @@
 {
-  "name": "template-node-ts",
-  "version": "1.0.0",
-  "description": "Basic template to start a project using nodejs with typescript",
+  "name": "social-bot",
+  "version": "0.1.0",
+  "description": "Social bot created with nodejs + typescript",
   "keywords": [
-    "template",
-    "node",
+    "discord",
+    "bot",
+    "nodejs",
     "typescript"
   ],
   "main": "dist/src/index.js",
   "author": {
     "name": "Edixon Alberto",
-    "email": "edixonalbertto@gmail.com"
+    "email": "edixonalbertto@gmail.com",
+    "url": "https://www.edixonalberto.com"
   },
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "ts-node -r ./src",
-    "start:dev": "nodemon -e ts -w ./src --exec \"yarn run dev\"",
     "lint": "prettier --write ./src/**/*.ts",
+    "start:dev": "nodemon -e ts -w ./src --exec \"ts-node -r ./src\"",
     "build": "tsc",
-    "start": ""
+    "start": "node ./dist"
   },
-  "dependencies": {},
+  "dependencies": {
+    "discord.js": "12.2.0"
+  },
   "devDependencies": {
     "@types/node": "^13.7.4",
     "dotenv": "^8.2.0",
