@@ -6,6 +6,7 @@ dist/
 # Files
 .env
 *.log
+doc.md
 
 # Remove Later
 yarn.lock
