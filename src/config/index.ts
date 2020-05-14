@@ -1,7 +1,8 @@
 export default async function configLoad() {
   if (process.env.NODE_ENV !== 'production') {
     const { config: configEnv } = await import('dotenv');
-    configEnv();
+    const result = configEnv();
+    if (result.error) throw new Error(result.error.message);
   }
 
   const ENV: NodeJS.ProcessEnv = process.env;
@@ -12,4 +13,5 @@ export default async function configLoad() {
   };
 
   global.config = config;
+  console.log('>> CONFIG -> OK');
 }

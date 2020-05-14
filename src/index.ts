@@ -12,7 +12,7 @@ async function main() {
 
     await bot.start();
   } catch (error) {
-    console.error('!! ERROR', error.message);
+    console.error(`!! ${error.name} ->`, error.message);
   }
 }
 

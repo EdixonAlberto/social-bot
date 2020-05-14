@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "prettier --write ./src/**/*.ts",
     "start:prod": "yarn run build && yarn start",
-    "start:dev": "nodemon -e ts -w ./src --exec \"clear() && ts-node -r ./src\"",
+    "start:dev": "nodemon -e ts -w ./src --exec \"ts-node -r ./src\"",
     "build": "tsc",
     "start": "node ./dist"
   },
