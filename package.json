@@ -1,7 +1,7 @@
 {
   "name": "social-bot",
   "version": "0.1.0",
-  "description": "Social bot created with nodejs + typescript",
+  "description": "Social bot basic created with nodejs + typescript",
   "keywords": [
     "discord",
     "bot",
@@ -18,7 +18,8 @@
   "private": false,
   "scripts": {
     "lint": "prettier --write ./src/**/*.ts",
-    "start:dev": "nodemon -e ts -w ./src --exec \"ts-node -r ./src\"",
+    "start:prod": "yarn run build && yarn start",
+    "start:dev": "nodemon -e ts -w ./src --exec \"clear() && ts-node -r ./src\"",
     "build": "tsc",
     "start": "node ./dist"
   },
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@types/node": "^13.7.4",
+    "@types/ws": "^7.2.4",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",

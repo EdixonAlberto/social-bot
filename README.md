@@ -1,20 +1,27 @@
-# template-node-ts
+# social-bot
 
 [![Linkedin: https://linkedin.com/in/edixonalberto](https://img.shields.io/badge/author-EdixonAlberto-purple.svg)](https://linkedin.com/in/edixonalberto)
 [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE.md)
 ![GitHub](https://img.shields.io/github/followers/EdixonAlberto.svg?label=Follow&style=social)
 
-Basic template to start a project using nodejs with typescript
+Social bot basic created with nodejs + typescript
 
-### Comands
+### Get Started
+
+Crete file `.env` and add the environment.
+
+```sh
+cp .env/template.env .env
+```
+
+Install dependencies and start.
+
 ```sh
 yarn install
 
-yarn start
-yarn dev
-yarn build
+yarn start:dev # to development
 ```
 
-### Screenshots
+<!-- ### Screenshots
 
-![image](./docs/template.png)
+![image](./docs/template.png) -->
