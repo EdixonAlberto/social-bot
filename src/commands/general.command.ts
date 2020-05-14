@@ -29,9 +29,14 @@ export const avatar = (content: TContent): void => {
     embed
       .setAuthor(`Foto de ${user.username}`)
       // .setTitle(title)
-      .setImage(user.displayAvatarURL())
+      .setImage(
+        user.displayAvatarURL({
+          dynamic: true // to show avatars animate
+        })
+      )
       // .setFooter(footer)
       .setColor('#FF8F40');
+
     channel.send(embed);
   } else channel.send('Usuario no encontrado 😕');
 };
