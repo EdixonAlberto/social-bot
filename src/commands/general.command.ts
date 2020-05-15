@@ -4,7 +4,7 @@ export const ping = (content: TContent): void => {
   content.server().channel.send('Pong 🏓');
 };
 
-export const avatar = (content: TContent): void => {
+export const avatar = async (content: TContent): Promise<void> => {
   const { author, channel, client } = content.server();
   const embed = new MessageEmbed();
 
@@ -37,6 +37,7 @@ export const avatar = (content: TContent): void => {
       // .setFooter(footer)
       .setColor('#FF8F40');
 
+    await channel.lastMessage?.delete();
     channel.send(embed);
   } else channel.send('Usuario no encontrado 😕');
 };
